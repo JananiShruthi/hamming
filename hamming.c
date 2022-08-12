@@ -87,24 +87,20 @@ void solve(int input[], int n)
 		code[position - 1] = value;
 	}
 
-	// Print the Hamming Code
 	printf("\nThe generated Code Word is: ");
 	for (i = 0; i < c_l; i++) {
 		printf("%d", code[i]);
 	}
 }
 
-// Driver Code
-void main()
+int main()
 {
-	// Given input message Bit
-	input[0] = 0;
-	input[1] = 1;
-	input[2] = 1;
-	input[3] = 1;
+	int n, i;
+	printf("Enter the length of the data: ");
+	scanf("%d", &n);
+	int input[n];
+	for(i = 0; i < n; i++)
+	    scanf("%d", &input[i]);
+	solve(input, n);
 
-	int N = 4;
-
-	// Function Call
-	solve(input, N);
 }
